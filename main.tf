@@ -16,8 +16,8 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "example" {
-  for_each = var.name
-  name     = each.key
+ 
+  name     = "rg-terraform"
   location = "West Europe"
   tags = {
     environment = "Dev"
