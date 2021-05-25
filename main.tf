@@ -16,7 +16,6 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "example" {
-  provider = azurerm.other_subscriber
   for_each = var.name
   name     = each.key
   location = "West Europe"
